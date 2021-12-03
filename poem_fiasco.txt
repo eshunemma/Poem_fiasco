@@ -1,0 +1,37 @@
+$ git checkout HEAD road-not-taken.txt 
+$ git checkout -- oven-bird.txt 
+$ git diff fire-and-ice.txt 
+$ git add .
+$ git reset HEAD fire-and-ice.txt 
+Unstaged changes after reset:
+M       fire-and-ice.txt
+$ git commit -m "first commit"
+[master 696d0ba] first commit
+ 2 files changed, 2 insertions(+)
+$ git add .
+$ git commit -m "changes to peoms"
+[master 455f562] changes to peoms
+ 3 files changed, 6 insertions(+), 1 deletion(-)
+$ git log
+commit 455f562f63ab5e63dd72ef3d295f3dff3570ed42
+Author: codecademy <ccuser@codecademy.com>
+Date:   Tue Nov 23 09:16:59 2021 +0000
+
+    changes to peoms
+
+commit 696d0babffcb23fd01f3f23d5f755c1ea3b80c75
+Author: codecademy <ccuser@codecademy.com>
+Date:   Tue Nov 23 09:12:24 2021 +0000
+
+    first commit
+
+commit 8a8cf5a34991e23726fab0d5cfa630b6fb069dd6
+$ git reset 696d0ba
+Unstaged changes after reset:
+M       fire-and-ice.txt
+M       oven-bird.txt
+M       road-not-taken.txt
+$ git checkout HEAD road-not-taken.txt 
+$ git checkout HEAD oven-bird.txt 
+$ git checkout HEAD fire-and-ice.txt 
+$ 
